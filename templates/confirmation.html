@@ -226,8 +226,19 @@ A confirmation email will be sent shortly with your booking details.<br><br>
 🎊 We hope you have an unforgettable experience.
 </p>
 
-<div class="buttons">
+<div class="buttons"><div class="buttons">
 
+    <form action="/generate" method="POST">
+
+        <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="event" value="{{ event }}">
+        <input type="hidden" name="tickets" value="{{ tickets }}">
+
+        <button type="submit">Generate Receipt</button>
+
+    </form>
+
+    <br>
 <a href="/" class="btn">
 🏠 Back to Home
 </a>

@@ -39,7 +39,8 @@ nav a:hover {
     color: yellow;
 }
 
-/* Home section */
+
+/* Hero Section */
 .hero {
     padding: 50px;
     text-align: center;
@@ -48,9 +49,11 @@ nav a:hover {
 
 .hero h2 {
     font-size: 35px;
+    margin-bottom: 15px;
 }
 
-/* Event cards */
+
+/* Event Cards */
 .event-container {
     display: flex;
     justify-content: center;
@@ -73,13 +76,11 @@ nav a:hover {
     object-fit: cover;
 }
 
-.card h3 {
-    padding: 10px;
-}
-
+.card h3,
 .card p {
     padding: 10px;
 }
+
 
 /* Buttons */
 button {
@@ -89,24 +90,88 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+
 /* Form */
 form {
     background: white;
     width: 350px;
+    max-width: 90%;
     margin: 30px auto;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 3px 8px gray;
 }
 
-input, select, textarea {
+input, 
+select, 
+textarea {
     width: 90%;
     padding: 10px;
     margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Receipt */
+.receipt {
+    width: 500px;
+    max-width: 90%;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-top: 8px solid #007BFF;
+    text-align: center;
+}
+
+.receipt h1 {
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.receipt p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.receipt hr {
+    border: 1px dashed gray;
+    margin: 15px 0;
+}
+
+.receipt button {
+    background: #28a745;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+.receipt button:hover {
+    background: #218838;
+}
+
+
+/* Mobile Responsive */
+@media(max-width:600px){
+
+    nav a{
+        display:block;
+        margin:10px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    .receipt{
+        width:90%;
+    }
 }

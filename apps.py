@@ -65,7 +65,19 @@ def confirmation():
         event=event,
         tickets=tickets
     )
+#generate
+@app.route("/generate", methods=["POST"])
+def generate():
+    name = request.form["name"]
+    event = request.form["event"]
+    tickets = request.form["tickets"]
 
+    return render_template(
+        "generate.html",
+        name=name,
+        event=event,
+        tickets=tickets
+    )
 
 # About
 @app.route("/about")
